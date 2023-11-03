@@ -23,6 +23,7 @@ function draw() {
   if (mouseIsPressed == true || snelheid == 5 ) {
       fill('green');
   }
+  
   else {
     fill('dodgerblue');
   }

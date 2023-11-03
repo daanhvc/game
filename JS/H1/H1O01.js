@@ -18,7 +18,7 @@ function draw() {
   
   // witte rechthoek met rode rand
   
-  stroke('green');
+  stroke('black');
   fill('white');
   strokeWeight(10);
   rect(125,125,200,200);

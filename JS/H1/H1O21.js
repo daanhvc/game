@@ -25,12 +25,15 @@ function draw() {
 }
   
   else {
-    fill('dodgerblue');
+    fill('dodgerblue') ;
   }
   
   
 if (mouseIsPressed == true  ) {
-  fill('red');
+  fill('red'), diameter = 100 ;
+}
+else {
+  diameter = 200 ;
 }
 
   if (x>880 || x<120 ) {

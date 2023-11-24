@@ -18,22 +18,23 @@ function draw() {
   mouseY=constrain(mouseY,25,height - 25);
 
   text("Beweeg de muis | x = " + round(mouseX) + " en y = " + round(mouseY),10,20);
+
+
   
-  if (mouseX >= width - 30 || mouseY >= height - 30 || mouseX >= width +30 ) {
+ 
+  if (mouseX >= width - 30 || mouseY >= height - 30 || mouseX <= 30  || mouseY <= 30  ) {
     kleur='red';
   }
   else {
     kleur='indianred';
   }
   
- 
-   
-  
+
  
   
   ellipse(width / 2,height / 2,100);
   tekenJos(mouseX,mouseY,kleur);
-  afstand=dist(315,105,225,225);
+  afstand=dist(mouseX,mouseY,width / 2,height /2 );
   text(afstand,10,40);
 }
 

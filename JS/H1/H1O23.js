@@ -1,41 +1,49 @@
-var x = 50;
-var y = 50;
+var xJager = 50;
+var yJager = 50;
+var xProoi = 800;
+var yProoi = 175;
 
 function setup() {
   canvas = createCanvas(1000,400);
   canvas.parent('processing');
   textFont("Verdana");
-  textSize(14);
+  textSize(140);
   noStroke();
   frameRate(50);
 }
 
 function draw() {
   background('olive');
-  
+  if (keyIsDown(LEFT_ARROW)) {
+    xJager -= 5;
+  }
+  if (keyIsDown(RIGHT_ARROW)) {
+    xJager += 5;
+  }
   if (keyIsDown(UP_ARROW)) {
-    y -= 5;
+    yJager -= 5;
   }
   if (keyIsDown(DOWN_ARROW)) {
-    y += 5;
+    yJager += 5;
   }
-  if (keyIsDown(left_arrow)) {
-    y -= 5;
-  }
-  if (keyIsDown(right_ARROW)) {
-    y += 5;
-  }
-  y = constrain(y,0,height - 100);
 
-  if (y >= 75 && y <= 225) {
+  xJager = constrain(xJager,0,width - 100);
+  yJager = constrain(yJager,0,height - 100);
+
+  if (xJager >= 700 && xJager <= 875 && yJager >= 75 && yJager <= 225) {
     fill('chartreuse');
   }
   else {
     fill('darkkhaki');
   }
-  
   rect(800,175,75,50);
-  
   fill('moccasin');
-  rect(x,y,100,100);   
+  rect(xJager,yJager,100,100);   
+}
+
+function eindScherm() {
+  background('white');
+  fill('black');
+  text("GEVANGEN!",75,250);
+  noLoop();
 }

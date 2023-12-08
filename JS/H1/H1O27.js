@@ -13,7 +13,7 @@ function setup() {
 function draw() {
   background('lavender');
   fill('black');
-  breedte = width / 4;
+  breedte = width / 5;
   text("aantal = " + aantal,10,20);  
   
   push();
@@ -24,11 +24,18 @@ function draw() {
     translate(breedte,0);
   }
   
+  if (keyIsDown(RIGHT_ARROW)) {
+    tekenJos();
+    translate(breedte,0);
+  }
+  
   pop();
   
   if (keyIsDown(RIGHT_ARROW)) {
     aantal++;
-  }   
+  }
+     
+
 }
 
 function tekenJos(s) {

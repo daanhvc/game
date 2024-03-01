@@ -9,13 +9,13 @@
   }
 
   body {
-    background: rgb(245, 7, 233);
+    background: rgb(233, 135, 6);
     display: flex;
     align-items: center;
     justify-content: center;
   }
   canvas {
-    border: 1px solid rgb(188, 19, 240);
+    border: 1px solid rgb(236, 11, 11);
   }
   </style>
 </head>
@@ -98,7 +98,7 @@ function loop() {
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
   // draw snake one cell at a time
-  context.fillStyle = 'green';
+  context.fillStyle = 'pink';
   snake.cells.forEach(function(cell, index) {
     
     // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
